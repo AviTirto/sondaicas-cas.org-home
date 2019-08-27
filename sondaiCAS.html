@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    console.log('Hello World');
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:700|Barlow:400,700|Roboto+Condensed:300,700|Roboto:900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Mukta:500|Rubik&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Muli:600,700|Poppins:600&display=swap');
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: white;
+        width: 100%;
+    }
+
+    html {
+        background-color: #04c1fd;
+        width: 100%;
+    }
+
+    header {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav {
+        padding: 15px;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        background-color: #262626;
+    }
+
+    #topnav {
+        text-align: right;
+        flex-grow: 1;
+    }
+
+    #topnav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #topnav ul li {
+        display: inline;
+        margin: 0px 0px;
+
+    }
+
+    #topnav ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 30px 10px;
+        transition: 0.25s;
+    }
+
+    #topnav ul li a:hover {
+        background-color: #04c1fd;
+    }
+
+    #logo {
+        flex-grow: 0;
+    }
+
+    #logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    #opening img {
+        width: 100%;
+        height: auto;
+    }
+    #opening_mobile{
+        display: none;
+    }
+
+    #cas {
+        display: flex;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 10px;
+    }
+
+    .cas_sect {
+        margin: 4%;
+        text-align: center;
+    }
+
+    .cas_sect h1 {
+        margin: 0px;
+        padding: 0px;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    .cas_sect img {
+        width: 70%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .cas_sect p {
+        padding: 0px;
+        margin: 0px;
+        font-size: 12px;
+        font-family: 'Barlow', sans-serif;
+    }
+
+    #start {
+        background-color: black;
+    }
+
+    #start_project {
+        text-align: center;
+    }
+
+    #start_project a img {
+        width: 20%;
+        height: auto;
+    }
+    #start_project a img:hover{
+        width: 22%;
+        height: auto;
+    }
+    #start_img_mobile{
+        display: none;
+    }
+    #start_img img {
+        width: 60%;
+        height: auto;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+    #featured{
+        width: 100%;
+        height: 60px;
+        background-color: #04c1fd;
+        padding-top: 20px;
+    }
+    #featured h1{
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+
+    #explore {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 40px;
+        background-color: white;
+    }
+
+    .project {
+        border: rgb(185, 184, 184) 2px solid;
+        margin: 10px;
+        padding: 0px;
+        padding-bottom: 10px;
+        padding-top: 0px;
+        min-width: 320px;
+        max-width: 320px;
+        height: auto;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .project_img {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project .project_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project_content{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .project_title {
+        border-bottom: rgb(185, 184, 184) 2px solid;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+
+    .project_activity {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project_activity h3 {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project_name {
+        text-align: left;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project_name ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project_name ul li a {
+        text-decoration: none;
+        color: #04c1fd;
+    }
+
+    .project_name ul li a h1 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 27px;
+    }
+
+    .project_name ul li a:hover {
+        text-decoration: none;
+        color: #06afe2;
+        font-weight: 900;
+    }
+
+    .project_details {
+        display: flex;
+        padding: 20px 10px;
+        border-bottom: rgb(185, 184, 184) 2px solid;
+        padding-right: 10px;
+    }
+
+    .project_details_set1 {
+        width: 20%;
+        height: auto;
+        flex-grow: 0;
+        text-align: center;
+        padding-right: 50px;
+        position: relative;
+        top: -10px;
+    }
+
+    .project_details_set2 {
+        width: 80%;
+        height: auto;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .project_date {
+        position: relative;
+        top: 10px;
+    }
+
+    .project_date p {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    .project_location p {
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        left: 16px;
+        top: -1px;
+        line-height: 14px;
+    }
+
+    .project_details_set1 p,
+    .project_details_set2 p {
+        margin-top: 5px;
+        color: #797979;
+        font-family: 'Mukta', sans-serif;
+    }
+
+    .project_details_set1 h4,
+    .project_details_set2 h4 {
+        color: #262626;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .project_date p,
+    .project_length p {
+        margin-bottom: 20px;
+    }
+
+    .project_date img,
+    .project_location img {
+        width: 30%;
+        height: auto;
+        position: relative;
+        top: 2px;
+        left: 17px;
+    }
+
+    .project_location img {
+        position: relative;
+        top: 2px;
+    }
+
+    .project_location {
+        position: relative;
+        top: 10px;
+    }
+
+    .project_length h4,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project_registration h4,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .take_action ul {
+        list-style: none;
+        padding: 0px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        align-content: center;
+    }
+
+    .take_action ul li {
+        text-decoration: none;
+        padding-left: 20px;
+    }
+
+    .take_action ul li a {
+        text-decoration: none;
+        color: white;
+        background-color: #04c1fd;
+        text-align: center;
+        padding: 10px 67px;
+        border-radius: 8px;
+        font-family: 'Muli', sans-serif;
+    }
+
+    .take_action ul li a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #06afe2;
+        text-align: center;
+        padding: 10px 67px;
+        border-radius: 8px;
+        font-family: 'Muli', sans-serif;
+    }
+
+    #media {
+        margin-top: 50px;
+        background-color: #04c1fd;
+        text-align: center;
+        display: block;
+    }
+
+    #media_icon {
+        display: flex;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        padding-top: 2%;
+        text-align: center; 
+        display: inline-block;
+    }
+
+    #media_icon img {
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+
+    }
+
+    #media_desc {
+        margin-top: 20px;
+        margin-bottom: 70px;
+    }
+
+    #media_desc h3 {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Barlow Semi Condensed';
+        margin-top: 8px;
+    }
+    #sondaicas_design_date{
+        position: relative;
+        left: 12px;
+    }
+    #topnav_mobile{
+        display: none;
+    }
+    .take_action_button button{
+        display: none;
+        padding: 20px 40px;
+        font-size: 15px;
+        border: 3px solid #04c1fd;
+        border-radius: 50px;
+        color: #04c1fd;
+    }
+    .take_action_button button:hover{
+        background-color: #04c1fd;
+        transition: 0.3s;
+        color: white;
+        font-size: 20px;
+        padding: 25px 45px;
+    }
+    .HappyHeartsEvent{
+        line-height: 14px;
+    }
+    .HappyHeartsProject{
+        font-size: 15px;
+    }
+    .HappyHeartTitle{
+        font-size: 24px;
+    }
+    @media screen and (max-width: 575px) {
+        nav{
+            padding: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 8px;
+            display: block;
+        }
+        #logo{
+            text-align: center;
+        }
+        #logo img{
+            width: 300px;
+            height: auto;
+        }
+        #topnav{
+            text-align: center;
+        }
+        #topnav ul{
+            display: inline-block;
+            border-right: solid 1px white;
+            border-left: solid 1px white;
+            padding: 7px 100px
+        }
+        #topnav ul li{
+            display: flex;
+            margin: auto;
+        }
+        #topnav ul li a{
+            margin: 0px;
+            padding: 0px;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+        #cas{
+            flex-wrap: wrap;
+        }
+        #opening_mobile{
+            display: block;
+        }
+        #opening_mobile img {
+        width: 100%;
+        height: auto;
+    }
+    #start_img{
+        display: none;
+    }
+    #start_img_mobile{
+        display: block;
+        padding: 0px;
+    }
+    #start_img_mobile img{
+        width: 100%;
+        height: auto;
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    #start_project a img {
+        width: 50%;
+        height: auto;
+    }
+    #opening{
+       display: none;
+    }
+    #media_icon img {
+        width: 60px;
+        height: 60px;
+    }
+    #media_desc h3{
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #media_icon{
+        padding-top: 4%;
+    }
+
+    }
+    /*
+    efaefaefa*/
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="logo.png" alt="SondaiCAS">
+            </div>
+            <div id="topnav">
+                <ul>
+                    <li><a href="sondaiCAS.html">HOME</a></li>
+                    <li><a href="act-now.html">ACT NOW</a></li>
+                    <li><a
+                            href="https://forms.gle/khZDXQHSo4rnSeHK6">START</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="topnav_mobile">
+                <ul>
+                    <li><a href="sondaiCAS.html">HOME</a></li>
+                    <li><a href="act-now.html">ACT NOW</a></li>
+                    <li><a
+                            href="https://forms.gle/khZDXQHSo4rnSeHK6">START</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="opening">
+            <img src="pic.png" alt="CAS">
+        </div>
+        <div id="opening_mobile">
+            <img src="mobile_banner.png" alt="CAS">
+        </div>
+        <div id="cas">
+            <div class="cas_sect">
+                <h1>CREATIVITY</h1>
+                <img src="creative.png" alt="creative">
+                <p>Exploring and extending ideas leading to an original or interperetive product or performance.</p>
+            </div>
+            <div class="cas_sect">
+                <h1>ACTIVITY</h1>
+                <img src="action.png" alt="action">
+                <p>Physical exertion contributing to a healthy life style.</p>
+            </div>
+            <div class="cas_sect">
+                <h1>SERVICE</h1>
+                <img src="service.png" alt="service">
+                <p>Collaborative and reciprocal engagement with the community in response to an automatic need</p>
+            </div>
+        </div>
+        <div id="start">
+            <div id="start_img">
+                <img src="DESKTOP-site.png" alt="start">
+            </div>
+            <div id="start_img_mobile">
+                <img src="MOBILE-site.png" alt="start">
+            </div>
+            <div id="start_project">
+                <a
+                    href="https://forms.gle/khZDXQHSo4rnSeHK6"><img
+                        src="start project.png" alt=""></a>
+            </div>
+        </div>
+        <div class="take_action_button">
+            <button type="button">Start Project</button>
+        </div>
+        <div id="featured">
+            <h1>Featured Projects</h1>
+        </div>
+        <div id="explore">
+            <div class="project">
+                <div class="project_img">
+                    <img src="Hope2.jpg" alt="project_image">
+                </div>
+                <div class="project_content">
+                    <div class="project_title">
+                    <div class="project_activity">
+                        <h3>HOPE</h3>
+                    </div>
+                    <div class="project_name">
+                        <ul>
+                            <li>
+                                <a href="activity_page_hope.html">
+                                    <h1 style="font-size: 23px; padding-top: 10px;">Volunteers and Documentation (SDN)</h1>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_details">
+                    <div class="project_details_set1">
+                        <div class="project_date">
+                            <img src="date.png" alt="calendar" class="project_calandar">
+                            <p id="sondaicas_design_date">8/9/2019</p>
+                        </div>
+                        <div class="project_location">
+                            <img src="locationpin.png" alt="location" class="project_spot">
+                            <p>Binus Simprung</p>
+                        </div>
+                    </div>
+                    <div class="project_details_set2">
+                        <div class="project_length">
+                            <h4>Length of Event</h4>
+                            <p>1hour/week</p>
+                        </div>
+                        <div class="project_registration">
+                            <h4>Latest Registration</h4>
+                            <p>1.6.2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="take_action">
+                    <ul>
+                        <li>
+                            <a href="https://forms.gle/mMjDxNBNgExV2woL7">TAKE ACTION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project_img">
+                    <img src="boat_excursion.jpeg" alt="project_image">
+                </div>
+                <div class="project_content">
+                        <div class="project_title">
+                                <div class="project_activity">
+                                    <h3>Project Sondaicus</h3>
+                                </div>
+                                <div class="project_name">
+                                    <ul>
+                                        <li>
+                                            <a href="activity_page_bram.html">
+                                                <h1 style="font-size: 26px">Ujung Kulon Planning Commitee</h1>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project_details">
+                                <div class="project_details_set1">
+                                    <div class="project_date">
+                                        <img src="date.png" alt="calendar" class="project_calandar">
+                                        <p>10.9.2019</p>
+                                    </div>
+                                    <div class="project_location">
+                                        <img src="locationpin.png" alt="location" class="project_spot">
+                                        <p id="ujon_kulon">Ujung Kulon</p>
+                                    </div>
+                                </div>
+                                <div class="project_details_set2">
+                                    <div class="project_length">
+                                        <h4>Length of Event</h4>
+                                        <p>5min/day</p>
+                                    </div>
+                                    <div class="project_registration">
+                                        <h4>Latest Registration</h4>
+                                        <p>1.6.2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="take_action">
+                    <ul>
+                        <li>
+                            <a href="https://forms.gle/mMjDxNBNgExV2woL7">TAKE ACTION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project_img">
+                    <img src="MicrophoneHappyHearts.jpeg" alt="project_image">
+                </div>
+                <div class="project_content">
+                        <div class="project_title">
+                                <div class="project_activity">
+                                    <h3 class="HappyHeartsProject">Happy Hearts Indonesia</h3>
+                                </div>
+                                <div class="project_name">
+                                    <ul>
+                                        <li>
+                                            <a href="acitivity_page_happyheartsoperator.html">
+                                                <h1 class="HappyHeartTitle">Happy Hearts Radio Operator</h1>
+                                            </a>
+                                        </li>
+                                </div>
+                            </div>
+                            <div class="project_details">
+                                <div class="project_details_set1">
+                                    <div class="project_date">
+                                        <img src="date.png" alt="calendar" class="project_calandar">
+                                        <p>10.9.2019</p>
+                                    </div>
+                                    <div class="project_location">
+                                        <img src="locationpin.png" alt="location" class="project_spot">
+                                        <p>School Based</p>
+                                    </div>
+                                </div>
+                                <div class="project_details_set2">
+                                    <div class="project_length">
+                                        <h4>Length of Event</h4>
+                                        <p class="HappyHeartsEvent">40minsx2 (snack+lunch) / day </p>
+                                    </div>
+                                    <div class="project_registration">
+                                        <h4>Latest Registration</h4>
+                                        <p>8.18.2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="take_action">
+                    <ul>
+                        <li>
+                            <a href="https://forms.gle/mMjDxNBNgExV2woL7">TAKE ACTION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                    <div class="project_img">
+                        <img src="BinusCafe.jpeg" alt="project_image">
+                    </div>
+                    <div class="project_content">
+                        <div class="project_title">
+                            <div class="project_activity">
+                                <h3 class="HappyHeartsProject">Binus Cafe</h3>
+                            </div>
+                            <div class="project_name">
+                                <ul>
+                                    <li>
+                                        <a href="activity_page_binuscafemember.html">
+                                            <h1>Binus Cafe Bazaar Team Member</h1>
+                                        </a>
+                                    </li>
+                            </div>
+                        </div>
+                        <div class="project_details">
+                            <div class="project_details_set1">
+                                <div class="project_date">
+                                    <img src="date.png" alt="calendar" class="project_calandar">
+                                    <p>8.8.2019</p>
+                                </div>
+                                <div class="project_location">
+                                    <img src="locationpin.png" alt="location" class="project_spot">
+                                    <p>School based</p>
+                                </div>
+                            </div>
+                            <div class="project_details_set2">
+                                <div class="project_length">
+                                    <h4>Length of Event</h4>
+                                    <p>snack and lunch time </p>
+                                </div>
+                                <div class="project_registration">
+                                    <h4>Latest Registration</h4>
+                                    <p>8.8.2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="take_action">
+                        <ul>
+                            <li>
+                                <a href="https://forms.gle/mMjDxNBNgExV2woL7">TAKE ACTION</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <div id="media">
+            <div id="media_icon">
+                <a href="https://www.instagram.com/sondaicus_/"><img src="instagram2.png" alt=""></a>
+                <img src="whatsapp2.png" alt="">
+                <img src="twitter2.png" alt="">
+            </div>
+            <div id="media_desc">
+                <h3>SondaiCAS and sondaicus.org is part of the greater</h3>
+                <h3><a href="">Project Sondaicus</a> and the afformentioned <a
+                        href="https://www.sondaicus.org/">sondaicus.org</a></h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
