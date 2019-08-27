@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #explore {
+        display: flex;
+        flex: row;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 40px;
+        background-color: white;
+    }
+
+    .project {
+        border: rgb(185, 184, 184) 2px solid;
+        margin: 10px;
+        padding: 0px;
+        padding-bottom: 10px;
+        padding-top: 0px;
+    }
+
+    .project_img {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project .project_img img {
+        width: 100%;
+        height: auto;
+    }
+    .project_content{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .project_title {
+        border-bottom: rgb(185, 184, 184) 2px solid;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+
+    .project_activity {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project_activity h3 {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project_name {
+        text-align: left;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project_name ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project_name ul li a {
+        text-decoration: none;
+        color: #04c1fd;
+    }
+
+    .project_name ul li a h1 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 27px;
+    }
+
+    .project_name ul li a:hover {
+        text-decoration: none;
+        color: #06afe2;
+        font-weight: 900;
+    }
+
+    .project_details {
+        display: flex;
+        padding: 20px 10px;
+        border-bottom: rgb(185, 184, 184) 2px solid;
+        padding-right: 10px;
+    }
+
+    .project_details_set1 {
+        width: 20%;
+        height: auto;
+        flex-grow: 0;
+        text-align: center;
+        padding-right: 50px;
+        position: relative;
+        top: -10px;
+    }
+
+    .project_details_set2 {
+        width: 80%;
+        height: auto;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .project_date {
+        position: relative;
+        top: 10px;
+    }
+
+    .project_date p {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    .project_location p {
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        left: 16px;
+        top: -1px;
+    }
+
+    .project_details_set1 p,
+    .project_details_set2 p {
+        margin-top: 5px;
+        color: #797979;
+        font-family: 'Mukta', sans-serif;
+    }
+
+    .project_details_set1 h4,
+    .project_details_set2 h4 {
+        color: #262626;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .project_date p,
+    .project_length p {
+        margin-bottom: 20px;
+    }
+
+    .project_date img,
+    .project_location img {
+        width: 30%;
+        height: auto;
+        position: relative;
+        top: 2px;
+        left: 17px;
+    }
+
+    .project_location img {
+        position: relative;
+        top: 2px;
+    }
+
+    .project_location {
+        position: relative;
+        top: 10px;
+    }
+
+    .project_length h4,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project_registration h4,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .take_action{
+        padding: 0px;
+        margin: 0px;
+    }
+    .take_action ul {
+        list-style: none;
+    }
+
+    .take_action ul li {
+        text-decoration: none;
+    }
+
+    .take_action ul li a {
+        text-decoration: none;
+        color: white;
+        background-color: #04c1fd;
+        text-align: center;
+        padding: 4% 30%;
+        border-radius: 8px;
+        font-family: 'Muli', sans-serif;
+        
+    }
+
+    .take_action ul li a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #06afe2;
+        text-align: center;
+        padding: 4% 30%;
+        border-radius: 8px;
+        font-family: 'Muli', sans-serif;
+    }
+    
+</style>
+
+<body>
+    <div id="explore">
+        <div class="project">
+            <div class="project_img">
+                <img src="project_image.png" alt="project_image">
+            </div>
+            <div class="project_content">
+                <div class="project_title">
+                    <div class="project_activity">
+                        <h3>Activity 1</h3>
+                    </div>
+                    <div class="project_name">
+                        <ul>
+                            <li>
+                                <a href="activitypage.html">
+                                    <h1>Project name here</h1>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_details">
+                    <div class="project_details_set1">
+                        <div class="project_date">
+                            <img src="date.png" alt="calendar" class="project_calandar">
+                            <p id="sondaicas_design_date">10.7.2019</p>
+                        </div>
+                        <div class="project_location">
+                            <img src="locationpin.png" alt="location" class="project_spot">
+                            <p>n.a.</p>
+                        </div>
+                    </div>
+                    <div class="project_details_set2">
+                        <div class="project_length">
+                            <h4>Length of Event</h4>
+                            <p>10min/day</p>
+                        </div>
+                        <div class="project_registration">
+                            <h4>Latest Registration</h4>
+                            <p>1.6.2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="take_action">
+                <ul>
+                    <li>
+                        <a href="https://forms.gle/N9irnqt1qQkghPfw8">TAKE ACTION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project_img">
+                <img src="project_image.png" alt="project_image">
+            </div>
+            <div class="project_content">
+                <div class="project_title">
+                    <div class="project_activity">
+                        <h3>Activity 1</h3>
+                    </div>
+                    <div class="project_name">
+                        <ul>
+                            <li>
+                                <a href="activitypage.html">
+                                    <h1>Project name here</h1>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_details">
+                    <div class="project_details_set1">
+                        <div class="project_date">
+                            <img src="date.png" alt="calendar" class="project_calandar">
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                        <div class="project_location">
+                            <img src="locationpin.png" alt="location" class="project_spot">
+                            <p>location</p>
+                        </div>
+                    </div>
+                    <div class="project_details_set2">
+                        <div class="project_length">
+                            <h4>Length of Event</h4>
+                            <p>x hours</p>
+                        </div>
+                        <div class="project_registration">
+                            <h4>Latest Registration</h4>
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="take_action">
+                <ul>
+                    <li>
+                        <a href="https://forms.gle/N9irnqt1qQkghPfw8">TAKE ACTION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project_img">
+                <img src="project_image.png" alt="project_image">
+            </div>
+            <div class="project_content">
+                <div class="project_title">
+                    <div class="project_activity">
+                        <h3>Activity 1</h3>
+                    </div>
+                    <div class="project_name">
+                        <ul>
+                            <li>
+                                <a href="activitypage.html">
+                                    <h1>Project name here</h1>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_details">
+                    <div class="project_details_set1">
+                        <div class="project_date">
+                            <img src="date.png" alt="calendar" class="project_calandar">
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                        <div class="project_location">
+                            <img src="locationpin.png" alt="location" class="project_spot">
+                            <p>location</p>
+                        </div>
+                    </div>
+                    <div class="project_details_set2">
+                        <div class="project_length">
+                            <h4>Length of Event</h4>
+                            <p>x hours</p>
+                        </div>
+                        <div class="project_registration">
+                            <h4>Latest Registration</h4>
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="take_action">
+                <ul>
+                    <li>
+                        <a href="https://forms.gle/N9irnqt1qQkghPfw8">TAKE ACTION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project_img">
+                <img src="project_image.png" alt="project_image">
+            </div>
+            <div class="project_content">
+                <div class="project_title">
+                    <div class="project_activity">
+                        <h3>Activity 1</h3>
+                    </div>
+                    <div class="project_name">
+                        <ul>
+                            <li>
+                                <a href="activitypage.html">
+                                    <h1>Project name here</h1>
+                                </a>
+                            </li>
+                    </div>
+                </div>
+                <div class="project_details">
+                    <div class="project_details_set1">
+                        <div class="project_date">
+                            <img src="date.png" alt="calendar" class="project_calandar">
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                        <div class="project_location">
+                            <img src="locationpin.png" alt="location" class="project_spot">
+                            <p>location</p>
+                        </div>
+                    </div>
+                    <div class="project_details_set2">
+                        <div class="project_length">
+                            <h4>Length of Event</h4>
+                            <p>x hours</p>
+                        </div>
+                        <div class="project_registration">
+                            <h4>Latest Registration</h4>
+                            <p>dd.mm.yyyy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="take_action">
+                <ul>
+                    <li>
+                        <a href="https://forms.gle/N9irnqt1qQkghPfw8">TAKE ACTION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
