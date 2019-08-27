@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:700|Barlow:400,700|Roboto+Condensed:300,700|Roboto:900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Mukta:500|Rubik&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Muli:600,700|Poppins:600&display=swap');
+
+    html {
+        background-color: #04c1fd;
+        width: 100vw;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: white;
+    }
+
+    header {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav {
+        padding: 15px;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        background-color: #262626;
+    }
+
+    ul{
+       font-size: 18px;
+        color: #6b6b6b;
+        margin-bottom: 40px;
+        margin-top: 6px;
+        font-family: 'Rubik', sans-serif; 
+    }
+
+    #topnav {
+        text-align: right;
+        flex-grow: 1;
+    }
+
+    #topnav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #topnav ul li {
+        display: inline;
+        margin: 0px 0px;
+
+    }
+
+    #topnav ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+
+    #topnav ul li a:hover {
+        background-color: #04c1fd;
+    }
+
+    #logo {
+        flex-grow: 0;
+    }
+
+    #logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    #title {
+        padding-top: 40px;
+        padding-left: 80px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    #activity_title h1 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 50px;
+    }
+
+    #project_name h3 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 25px;
+        color: #04c1fd;
+    }
+
+    #author h3 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 25px;
+        color: rgb(151, 149, 149);
+    }
+
+    main {
+        padding-left: 80px;
+        padding-top: 30px;
+        display: flex;
+        padding-right: 80px;
+    }
+
+    #picture {
+        width: 40%;
+        margin-right: 80px;
+    }
+
+    #picture img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+    .participants{
+        margin-left: 40px;
+        display: flex;
+        border: 5px solid #04c1fd;
+        border-radius: 10px;
+        width: 130px;
+        height: 50px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .participants_joined{
+        margin-right: 25px;
+        padding-left: 16px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .participants_needed{
+        background-color: #04c1fd;
+        width: 70px;
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 40px;
+        padding-top: 10px;
+    }
+    .participants_needed p{
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .participants_joined p{
+        padding-top: 10px;
+        margin-top: 0px;
+        padding-left: 5px;
+    }
+
+    #content {
+        width: 60%;
+    }
+
+    #detail {
+        display: flex;
+        padding-top: 25px;
+    }
+
+    #detail_set1 {
+        width: 30%;
+        text-align: center;
+    }
+
+    #detail_set2 {
+        width: 70%;
+        text-align: center;
+        position: relative;
+        top: 10px;
+    }
+
+    #detail_set1 p,
+    #detail_set2 p {
+        font-size: 22px;
+        color: #6b6b6b;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 40px;
+        margin-top: 6px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    #detail_set1 h3,
+    #detail_set2 h3 {
+        font-size: 25px;
+        color: #262626;
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    #detail_set1 img {
+        width: 18%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .project_registration {
+        position: relative;
+        top: 11px;
+    }
+
+    .project_registration p {
+        position: relative;
+        top: 5px;
+    }
+    .project_type{
+        padding-top: 15px;
+    }
+
+    #activity_role h3,
+    #project_description h3 {
+        color: #262626;
+        font-size: 25px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    #activity_role p,
+    #project_description p {
+        color: #6b6b6b;
+        font-size: 20px;
+        font-family: 'Rubik', sans-serif;
+        line-height: 30px;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: #04c1fd;
+        text-align: center;
+        display: block;
+    }
+
+    #footer_icon {
+        display: flex;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        padding-top: 2%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    #footer_icon img {
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+    }
+
+    #footer_desc {
+        margin-top: 20px;
+        margin-bottom: 70px;
+    }
+
+    #footer_desc h3 {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Barlow Semi Condensed';
+        margin-top: 8px;
+    }
+
+    #take_action {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 90px;
+    }
+
+    #take_action ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    #take_action ul li {
+        text-decoration: none;
+    }
+
+    #take_action ul li a {
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        color: white;
+        background-color: #04c1fd;
+        text-align: center;
+        padding: 20px 260px;
+        border-radius: 8px;
+        font-family: 'Muli', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .HappyHeartsEvent{
+        line-height: 14px;
+    }
+
+    @media screen and (max-width: 575px) {
+        nav {
+            padding: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 8px;
+            display: block;
+        }
+
+        #logo {
+            text-align: center;
+        }
+
+        #logo img {
+            width: 300px;
+            height: auto;
+        }
+
+        #topnav {
+            text-align: center;
+        }
+
+        #topnav ul {
+            display: inline-block;
+            border-right: solid 1px white;
+            border-left: solid 1px white;
+            padding: 7px 100px
+        }
+
+        #topnav ul li {
+            display: flex;
+            margin: auto;
+        }
+
+        #topnav ul li a {
+            margin: 0px;
+            padding: 0px;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+
+        #activity_title h1 {
+            font-size: 35px;
+        }
+
+        #project_name h3,
+        #author h3 {
+            font-size: 20px;
+        }
+
+        #picture img {
+            width: 355px;
+            height: auto;
+        }
+
+        main {
+            display: block;
+            padding: 0px;
+            padding-left: 10px;
+        }
+
+        #title {
+            padding: 0px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 15px;
+        }
+
+        #content {
+            width: 100%;
+        }
+
+        #detail_set1 p,
+        #detail_set2 p {
+            font-size: 18px;
+        }
+
+        #detail_set1 h3,
+        #detail_set2 h3 {
+            font-size: 20px;
+        }
+        #activity_role h3,
+    #project_description h3 {
+        font-size: 20px;
+    }
+    #activity_role p,
+    #project_description p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #take_action ul li a {
+        padding: 10px 111px;
+        font-size: 20px;
+    }
+    #footer_icon img {
+        width: 60px;
+        height: 60px;
+    }
+    #footer_desc h3{
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #footer_icon{
+        padding-top: 4%;
+    }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="logo.png" alt="SondaiCAS">
+            </div>
+            <div id="topnav">
+                <ul>
+                    <li><a href="sondaiCAS.html">HOME</a></li>
+                    <li><a href="act-now.html">ACT NOW</a></li>
+                    <li><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScNeZ4fL9h-LerGCaDf-GK5dprYcCva1u21UEBI6tWaSkUFgA/viewform">START</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="title">
+        <div id="activity_title">
+            <h1>FINANCE TEAM (SPONSOR, TICKETING and BUDGET)</h1>
+        </div>
+        <div id="project_name">
+            <h3>Binus Cup</h3>
+        </div>
+        <div id="author">
+            <h3>Gizelle Gabrielle</h3>
+        </div>
+    </div>
+    <main>
+        <div id="picture">
+            <img src="BinusCup.jpg" alt="">
+            <img src="FinanceBinusCup.jpeg" alt="">
+            <h1 style="font-family: 'Roboto Condensed', sans serif">Particpants Needed</h1>
+            <div class="participants">
+                    <div class="participants_joined">
+                        <p>0</p>
+                    </div>
+                    <div class="participants_needed">
+                        <p>10</p>
+                    </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="detail">
+                <div id="detail_set1">
+                    <div class="project_date">
+                        <img src="date.png" alt="calendar" class="project_calandar">
+                        <p>02.14.2020</p>
+                    </div>
+                    <div class="project_location">
+                        <img src="locationpin.png" alt="location" class="project_spot">
+                        <p>Binus Simprug</p>
+                    </div>
+                    <div class="project_approach">
+                        <h3><strong>Approaches</strong></h3>
+                        <p>Community Based, Ongoing, and School Based</p>
+                    </div>
+                </div>
+                <div id="detail_set2">
+                    <div class="project_length">
+                        <h3><strong>Length of Event</strong></h3>
+                        <p>40minsx2 (snack+lunch) / day</p>
+                    </div>
+                    <div class="project_registration">
+                        <h3><strong>Latest Registration</strong></h3>
+                        <p>8.18.2019</p>
+                    </div>
+                    <div class="project_type">
+                        <h3><strong>Type of SaA</strong></h3>
+                        <p>Direct</p>
+                    </div>
+                </div>
+            </div>
+            <div id="activity_role">
+                <h3>Activity Role</h3>
+                <p>Binus Cup VII is a multi-event sports competition that is hosted by Binus School Simprug. This event is of a great significance of Binus Simprug's culture and history, as it is held biennially since Binus was established in 2003. The event itself will be held on February 14 2020, until February 22 2020. The overall event aims to encourage inter-school togetherness and spirit in sportsmanship, develop good attitudes of pride and ethical behaviour, stimulate physical and social skills through sports and to embolden higher standards of achievement.</p>
+            </div>
+            <div id="project_description">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>Basic responsibilities:</li>
+                        <ul>
+                            <li>Finding sponsors</li>
+                            <li>Ticketing</li>
+                            <li>Arranging the budget (prize money, printing)</li>
+                        </ul>
+                </ul>
+                <p>To-do list: Ticketing</p>
+                <ul>
+                    <li>Create ticketing works with the technical department</li>
+                    <ul>
+                        <li>Designing the tickets with the creative team</li>
+                    </ul>
+                    <li>Create a purchase system (buy 1 for _, buy 2 for only _, etc.)</li>
+                    <ul>
+                        <li>Do this for the ticketing system on d-day</li>
+                    </ul>
+                    <li>non-participants/committee/teacher ticket to watch the competitions</li>
+                    <ul>
+                        <li>Also, do this for the closing ceremony</li>
+                    </ul>
+                    <li>We’re planning to invite a band to come and perform but this is to be determined </li>
+                    <li>Create a budget system</li>
+                </ul>
+
+                <p>To-do list: Sponsor</p>
+                <p>FOR THIS, YOU NEED TO INTENSELY COLLABORATE WITH THE HUMAN RELATIONS TEAM FROM THE COMPETITION DEPARTMENT</p>
+                <ul>
+                    <li>Create a sponsorship proposal form</li>
+                    <ul>
+                        <li>An example of a sponsorship proposal will be posted to google classroom</li>
+                    </ul>
+                    <li>Create a list of all the sponsors acquired for the whole of Binus Cup</li>
+                    <ul>
+                        <li>Categorise them: media sponsors, internet service providers, transportation services, printing services, etcetera</li>
+                        <li>Please also note down the small companies and parents who are donators</li>
+                    </ul>
+                    <li>Coordinate with sponsors</li>
+                </ul>
+            </div>
+            <div id="take_action">
+                <ul>
+                    <li>
+                        <a href="https://forms.gle/mMjDxNBNgExV2woL7">TAKE ACTION</a>
+                    </li>
+                </ul>
+            </div>
+    </main>
+    <footer>
+        <div id="footer_icon">
+            <a href="https://www.instagram.com/sondaicus_/"><img src="instagram2.png" alt=""></a>
+            <img src="whatsapp2.png" alt="">
+            <img src="twitter2.png" alt="">
+        </div>
+        <div id="footer_desc">
+            <h3>SondaiCAS and sondaicus.org is part of the greater</h3>
+            <h3><a href="">Project Sondaicus</a> and the afformentioned <a
+                    href="https://www.sondaicus.org/">sondaicus.org</a></h3>
+        </div>
+    </footer>
+</body>
+
+</html>
